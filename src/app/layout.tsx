@@ -22,11 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          defer
-          data-site="YOUR_DOMAIN_HERE"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
         <link
           rel="shortcut icon"
           href="https://cdn.eltonleao.com/v1/img/favicon/favicon.ico"
