@@ -1,0 +1,151 @@
+.atom {
+    /* background-color: red; */
+    /* width: fit-content; */
+    /* height: fit-content; */
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    z-index: 0;
+}
+
+.logomasthead {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    opacity: .08
+}
+
+.logomasthead .sphere-center {
+    width: 5em;
+    height: 5em;
+    align-self: center;
+    position: relative !important;
+}
+
+.logomasthead .stroke {
+    border: solid white 3px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-self: center;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.logomasthead .stroke-1 {
+    width: 280px;
+    height: 280px;
+    -webkit-animation: spin-right 100s linear infinite;
+    animation: spin-right 100s linear infinite;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere-1 {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    align-self: center;
+    opacity: 1 !important;
+}
+
+.logomasthead .stroke-2 {
+    height: 450px;
+    width: 450px;
+    justify-content: center;
+    -webkit-animation: spin-left 100s linear infinite;
+    animation: spin-left 100s linear infinite;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere-2 {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    justify-self: center;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere-3 {
+    width: 30px;
+    height: 30px;
+    left: -15px;
+    align-self: center;
+    opacity: 1 !important;
+}
+
+.logomasthead .stroke-3 {
+    height: 600px;
+    width: 600px;
+    justify-content: center;
+    -webkit-animation: spin-right 50s linear infinite;
+    animation: spin-right 50s linear infinite;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere-4 {
+    width: 30px;
+    height: 30px;
+    bottom: -15px;
+    opacity: 1 !important;
+}
+
+.logomasthead .sphere-5 {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    opacity: 1 !important;
+}
+
+@keyframes spin-right {
+    from {
+        transform: rotate(0deg);
+        background-position: center;
+    }
+
+    to {
+        transform: rotate(359deg);
+        background-position: left;
+    }
+}
+
+@keyframes spin-left {
+    from {
+        transform: rotate(0deg);
+        background-position: center;
+    }
+
+    to {
+        transform: rotate(-359deg);
+        background-position: right;
+    }
+}
+
+@-webkit-keyframes spin-right {
+    from {
+        -webkit-transform: rotate(0deg);
+        background-position: center;
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+        background-position: left;
+    }
+}
+
+@-webkit-keyframes spin-left {
+    from {
+        -webkit-transform: rotate(0deg);
+        background-position: center;
+    }
+
+    to {
+        -webkit-transform: rotate(-359deg);
+        background-position: right;
+    }
+}

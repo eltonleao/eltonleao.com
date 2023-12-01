@@ -1,80 +1,94 @@
-# blog
+# [NextJS Tailwind Author Page](http://demos.creative-tim.com/nextjs-tailwind-author-page?ref=readme-ntpp) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/nextjs-tailwind-author-page&text=Check%20Material%20Tailwind%202%20Template%20made%20by%20@CreativeTim%20#webdesign%20#template%20#materialdesign%20#react%20https://www.creative-tim.com/product/nextjs-tailwind-author-page)
 
-This project was bootstrapped with [Frontity](https://frontity.org/).
+![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-tailwind-author-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-author-page/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-tailwind-author-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-author-page/issues?q=is%3Aissue+is%3Aclosed)
 
-#### Table of Contents
+![Image](https://s3.amazonaws.com/creativetim_bucket/products/742/original/material-tailwind-react-author-template-thumbnail.jpg?1697629563)
 
-- [Launch a development server](#launch-a-development-server)
-- [Create your custom theme](#create-your-custom-theme)
-- [Create a production-ready build](#create-a-production-ready-build)
-- [Deploy](#deploy)
+Introducing Tailwind Author Page, a free "About the Author" blog page based on Tailwind CSS and Material Tailwind.
 
-### Launch a development server
+Are you looking for a pre-designed and customizable blog web page template specifically created for writers, authors, and blog owners to showcase their work and establish an online presence. Look no further! We are thrilled to offer you a Free Author Page Template, a beautifully designed and user-friendly template crafted specifically for website blog developers like you.
 
-```
-npx frontity dev
-```
+This "About the Author" template is built with Tailwind CSS and Material Tailwind, offering seamless customization to align with your website's unique branding. The free blog template includes key features such as an author image, a succinct author bio, related articles, and a convenient contact form.
 
-Runs the app in development mode. Open http://localhost:3000 to view it in the browser.
+**Documentation built by Developers**
 
-The site will automatically reload if you make changes inside the `packages` folder. You will see the build errors in the console.
+Each element is well presented in very complex documentation.
 
-> Have a look at our [Quick Start Guide](https://docs.frontity.org/getting-started/quick-start-guide)
+You can read more about the [documentation here](https://www.material-tailwind.com/docs/react/installation).
 
-### Create your custom theme
+**HELPFUL LINKS**
 
-```
-npx frontity create-package your-custom-theme
-```
+- View [Github Repository](https://github.com/creativetimofficial/nextjs-tailwind-author-page)
+- Check [FAQ Page](https://www.creative-tim.com/faq)
 
-Use the command `npx frontity create-package` to create a new package that can be set in your `frontity.settings.js` as your theme.
+## [Demo](https://creative-tim.com/product/nextjs-tailwind-author-page)
 
-> Have a look at our blog post [How to Create a React WordPress Theme in 30 Minutes](https://frontity.org/blog/how-to-create-a-react-theme-in-30-minutes/)
+## Quick start
 
-### Create a production-ready build
+Quick start options:
 
-```
-npx frontity build
-```
+- Download from [Creative Tim](https://www.creative-tim.com/product/nextjs-tailwind-author-page?ref=readme-ntpp).
 
-Builds the app for production to the `build` folder.
+## Terminal Commands
 
-This will create a `/build` folder with a `server.js` (a [serverless function](https://vercel.com/docs/v2/serverless-functions/introduction)) file and a `/static` folder with all your javascript files and other assets.
+1. Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
+2. Navigate to the root ./ directory of the product and run `npm install` to install our local dependencies.
 
-Your app is ready to be deployed.
+## Documentation
 
-> Get more info about [Frontity's architecture](https://docs.frontity.org/architecture)
+The documentation for the Material Dashboard is hosted at our [website](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp).
 
-### Deploy
+## Browser Support
 
-With the files generated in the _build_ you can deploy your project.
+At present, we officially aim to support the last two versions of the following browsers:
 
-#### As a node app
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
-Use `npx frontity serve` to run it like a normal Node app.
+## Resources
 
-This command generates (and runs) a small web server that uses the generated `server.js` and `/static` to serve your content.
+- [Live Preview](https://demos.creative-tim.com/nextjs-tailwind-author-page?ref=readme-ntpp)
+- [Download Page](https://www.creative-tim.com/product/nextjs-tailwind-author-page?ref=readme-ntpp)
+- Documentation is [here](https://www.material-tailwind.com/docs/react/installation?ref=readme-ntpp)
+- [License Agreement](https://www.creative-tim.com/license?ref=readme-ntpp)
+- [Support](https://www.creative-tim.com/contact-us?ref=readme-ntpp)
+- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-tailwind-author-page/issues)
+- [Nepcha Analytics](https://nepcha.com?ref=readme) - Analytics tool for your website
 
-#### As a serverless service
+## Reporting Issues
 
-Upload your `static` folder to a CDN and your `server.js` file to a serverless service, like Vercel or Netlify.
+We use GitHub Issues as the official bug tracker for the Nextjs Tailwind Author Page. Here are some advices for our users that want to report an issue:
 
-> Get more info about [how to deploy](https://docs.frontity.org/deployment) a Frontity project
+1. Make sure that you are using the latest version of the Nextjs Tailwind Author Page. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/product/nextjs-tailwind-author-page?ref=readme-ntpp).
+2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
+3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
----
+## Technical Support or Questions
 
-## Frontity Community
+If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=readme-ntpp) instead of opening an issue.
 
-[![Community Forum Topics](https://img.shields.io/discourse/topics?color=blue&label=community%20forum&server=https%3A%2F%2Fcommunity.frontity.org%2F)](https://community.frontity.org/) [![Twitter: frontity](https://img.shields.io/twitter/follow/frontity?style=social)](https://twitter.com/frontity) [![Frontity GitHub Stars](https://img.shields.io/github/stars/frontity/frontity?style=social)](https://github.com/frontity/frontity)
+## Licensing
 
-👋 &nbsp;We'd love for you to be part of the Frontity community. There are a variety of different ways in which you can find more information about the project, join in discussions about it, and also get involved:
+- Copyright 2023 [Creative Tim](https://www.creative-tim.com?ref=readme-ntpp)
+- Creative Tim [license](https://www.creative-tim.com/license?ref=readme-ntpp)
 
-- **[Learn Frontity](https://frontity.org/learn/)**: in this page you can find Frontity's primary learning resources, including documentation resources, example projects, videos, and more.
-- **[Community forum](https://community.frontity.org/)**: Frontity's forum is a great place to ask questions, help fellow Frontity users, and share your projects. It's also where you can keep track of the development work, join feature discussions, and collaborate on building Frontity itself.
-- **[GitHub](https://github.com/frontity/frontity)**: for bug reports and code contributions. Questions are answered in the community forum.
+## Useful Links
 
-If you're looking for news and updates about Frontity, [Twitter](https://twitter.com/frontity) and the [blog](https://frontity.org/blog/) are pretty good places to start. You can also join the **[Frontity Newsletter](https://frontity.org/newsletter/)** and stay updated on new releases and features, learning resources, and community news.
+- [More products](https://www.creative-tim.com/templates?ref=readme-ntpp) from Creative Tim
 
-### Contributing
+- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
 
-Frontity welcomes contributions in all forms. There are many different ways to support the project. Check out the **[How to contribute](https://docs.frontity.org/contributing/how-to-contribute)** page for ideas on contributing and helping make Frontity better.
+- [Freebies](https://www.creative-tim.com/bootstrap-themes/free?ref=readme-ntpp) from Creative Tim
+
+- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-ntpp) (earn money)
+
+##### Social Media
+
+Twitter: <https://twitter.com/CreativeTim>
+
+Facebook: <https://www.facebook.com/CreativeTim>
+
+Dribbble: <https://dribbble.com/creativetim>
+
+Google+: <https://plus.google.com/+CreativetimPage>
+
+Instagram: <https://instagram.com/creativetimofficial>
