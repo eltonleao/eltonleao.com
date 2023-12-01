@@ -1,4 +1,4 @@
-# my-first-frontity-project
+# blog
 
 This project was bootstrapped with [Frontity](https://frontity.org/).
 
