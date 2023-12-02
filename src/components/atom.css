@@ -1,7 +1,7 @@
 .atom {
     position: fixed;
-    left: 50%;
-    transform: translate(-50%, -40px);
+    left: 0;
+    transform: translate(-50%, -50%);
     z-index: 0;
 }
 
