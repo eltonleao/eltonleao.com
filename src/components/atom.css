@@ -1,10 +1,7 @@
 .atom {
-    /* background-color: red; */
-    /* width: fit-content; */
-    /* height: fit-content; */
-    position: absolute;
+    position: fixed;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -40px);
     z-index: 0;
 }
 
@@ -17,8 +14,8 @@
 }
 
 .logomasthead .sphere-center {
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 6em;
     align-self: center;
     position: relative !important;
 }

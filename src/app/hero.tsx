@@ -10,9 +10,9 @@ function goTo(href: string) {
 
 function Hero() {
   return (
-    <header className="bg-gray-900 mb-96">
+    <header className="bg-gray-900 mb-96 border-solid-red">
+      <Atom></Atom>
       <div className="container mx-auto px-8 h-[22rem] lg:px-48 translate-y-64">
-        <Atom></Atom>
         <Image
           width={1024}
           height={1024}
