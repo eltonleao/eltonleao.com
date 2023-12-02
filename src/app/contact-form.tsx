@@ -12,7 +12,6 @@ import {
 } from "@material-tailwind/react";
 import { PhoneIcon, EnvelopeIcon, TicketIcon } from "@heroicons/react/24/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGithub,

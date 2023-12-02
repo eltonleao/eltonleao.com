@@ -4,13 +4,33 @@ import Image from "next/image";
 import { Button, Typography } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
+import { useEffect } from "react";
+
+import anime from "animejs/lib/anime.es.js";
+
+import AnimReact from "../components/animeicons/reactIcon";
+import AnimVue from "../components/animeicons/vueIcon";
+
 function goTo(href: string) {
   return window.open(href, "_blank");
 }
 
 function Hero() {
+  useEffect(() => {
+    anime({
+      targets: ".react-logo",
+      scale: 1.2,
+      easing: "easeInOutSine",
+      loop: true,
+      direction: "alternate",
+      duration: 5000,
+    });
+  }, []);
+
   return (
     <header className="bg-gray-900 mb-96 border-solid-red">
+      <AnimReact></AnimReact>
+      <AnimVue></AnimVue>
       <Atom></Atom>
       <div className="container mx-auto px-8 h-[22rem] lg:px-48 translate-y-64">
         <Image
@@ -32,8 +52,8 @@ function Hero() {
           </Button>
         </div>
         <Typography variant="lead" className="!text-gray-500 mt-8">
-          Full Stack Web Developer creating impactful solutions for better lives
-          through technology for over 5 years
+          Full Stack Web Developer for over 5 years creating impactful solutions
+          for better lives through technology.
         </Typography>
         <Button
           variant="text"
