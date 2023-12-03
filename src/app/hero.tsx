@@ -10,7 +10,7 @@ function goTo(href: string) {
 
 function Hero() {
   return (
-    <header className="bg-gray-900 mb-96 border-solid-red">
+    <header className="bg-gray-900 mb-64 border-solid-red">
       <Atom></Atom>
       <div className="container mx-auto px-8 h-[22rem] lg:px-48 translate-y-64">
         <Image
@@ -33,9 +33,9 @@ function Hero() {
         </div>
         <Typography variant="lead" className="!text-gray-500 mt-8">
           Full Stack Web Developer creating impactful solutions for better lives
-          through technology for over 5 years
+          through technology for over 5 years.
         </Typography>
-        <Button
+        {/* <Button
           variant="text"
           color="gray"
           className="flex items-center gap-2 mt-2"
@@ -45,7 +45,7 @@ function Hero() {
             strokeWidth={3}
             className="h-3.5 w-3.5 text-gray-900"
           />
-        </Button>
+        </Button> */}
       </div>
     </header>
   );

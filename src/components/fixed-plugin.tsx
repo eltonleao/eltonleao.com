@@ -4,7 +4,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export function FixedPlugin() {
   return (
-    <a href="#" target="_blank">
+    <a href="#contact" target="_self">
       <Button
         color="white"
         size="sm"
