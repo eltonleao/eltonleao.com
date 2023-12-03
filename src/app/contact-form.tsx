@@ -47,7 +47,7 @@ export function ContactForm() {
                     variant="static"
                     label="First Name"
                     name="first-name"
-                    placeholder="eg. Lucas"
+                    placeholder="John"
                     containerProps={{
                       className: "!min-w-full mb-3 md:mb-0",
                     }}
@@ -59,7 +59,7 @@ export function ContactForm() {
                     variant="static"
                     label="Last Name"
                     name="last-name"
-                    placeholder="eg. Jones"
+                    placeholder="Watson"
                     containerProps={{
                       className: "!min-w-full",
                     }}
@@ -72,12 +72,11 @@ export function ContactForm() {
                   variant="static"
                   label="Email"
                   name="first-name"
-                  placeholder="eg. lucas@mail.com"
+                  placeholder="john.h.watson@mail.com"
                   containerProps={{
                     className: "!min-w-full mb-8",
                   }}
                 />
-                {/* @ts-ignore */}
                 <Textarea
                   color="gray"
                   size="lg"
@@ -85,7 +84,7 @@ export function ContactForm() {
                   label="Your Message"
                   name="first-name"
                   containerProps={{
-                    className: "!min-w-full mb-10 md:mb-28",
+                    d: "!min-w-full mb-10 md:mb-28",
                   }}
                 />
                 <div className="w-full flex justify-end">
