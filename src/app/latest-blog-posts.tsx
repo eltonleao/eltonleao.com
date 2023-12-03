@@ -49,11 +49,10 @@ export function LatestBlogPosts() {
           <div className="absolute inset-0 h-full w-full bg-gray-900/75" />
           <CardBody className="relative w-full">
             <Typography variant="h3" className="mt-4" color="white">
-              Discover all my articles
+              Fetch all DevLogs
             </Typography>
             <Typography color="white" className="py-4 font-normal">
-              I am a versatile writer who explores a wide range of genres and
-              topics.
+              Read about projects, ideas, and more!
             </Typography>
             <Link href="/blog/posts">
               <Button
