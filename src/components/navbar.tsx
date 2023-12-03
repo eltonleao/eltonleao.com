@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Navbar as MTNavbar,
   Collapse,
@@ -95,7 +95,7 @@ export function Navbar({ isSolid = false }) {
           >
             Log in
           </Button> */}
-          <a href="/blog/posts">
+          <a href="#devlog">
             <Button color={isScrolling || isSolid ? "gray" : "white"}>
               Projects
             </Button>
