@@ -25,7 +25,7 @@ function goTo(href: string) {
 
 export function ContactForm() {
   return (
-    <section className="px-8 pt-20">
+    <section id="contact" className="px-8 pt-20">
       <div className="container mx-auto mb-5 md:mb-20 text-center">
         <Typography variant="h1" color="blue-gray" className="mb-4">
           Let`s keep in touch!
@@ -137,17 +137,17 @@ export function ContactForm() {
                     <FontAwesomeIcon className="text-lg" icon={faLinkedin} />
                   </IconButton>
                 </Link>
+                <Link href={"https://github.com/eltonleao"} target="_blank">
+                  <IconButton variant="text" color="white">
+                    <FontAwesomeIcon className="text-lg	" icon={faGithub} />
+                  </IconButton>
+                </Link>
                 <Link
                   href={"https://instagram.com/eltonleao.dev"}
                   target="_blank"
                 >
                   <IconButton variant="text" color="white">
                     <FontAwesomeIcon className="text-lg" icon={faInstagram} />
-                  </IconButton>
-                </Link>
-                <Link href={"https://github.com/eltonleao"} target="_blank">
-                  <IconButton variant="text" color="white">
-                    <FontAwesomeIcon className="text-lg	" icon={faGithub} />
                   </IconButton>
                 </Link>
               </div>
