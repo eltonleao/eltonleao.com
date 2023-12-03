@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Navbar as MTNavbar,
   Collapse,
@@ -11,14 +11,15 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
+  target?: string;
 }
-function NavItem({ children, href }: NavItemProps) {
+function NavItem({ children, href, target }: NavItemProps) {
   return (
     <li>
       <Typography
         as="a"
         href={href || "#"}
-        target={href ? "_blank" : "_self"}
+        target={target ? target : "_self"}
         variant="small"
         className="font-medium"
       >
@@ -28,7 +29,8 @@ function NavItem({ children, href }: NavItemProps) {
   );
 }
 
-export function Navbar() {
+export function Navbar({ isSolid = false }) {
+  console.log("🚀 ~ file: navbar.tsx:32 ~ Navbar ~ isSolid:", isSolid);
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
   const [shadow, setShadow] = React.useState(false);
@@ -64,31 +66,39 @@ export function Navbar() {
       fullWidth
       shadow={false}
       blurred={false}
-      color={isScrolling ? "white" : "transparent"}
+      color={isScrolling || isSolid ? "white" : "transparent"}
       className="fixed top-0 z-50 border-0"
     >
       <div className="container mx-auto flex items-center justify-between">
-        <Typography variant="h6" color={isScrolling ? "blue-gray" : "white"}>
+        <Typography
+          variant="h6"
+          color={isScrolling || isSolid ? "blue-gray" : "white"}
+        >
           eltonleao.dev
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
-            isScrolling ? "text-gray-900" : "text-white"
+            isScrolling || isSolid ? "text-gray-900" : "text-white"
           }`}
         >
-          <NavItem>Home</NavItem>
-          <NavItem>About</NavItem>
-          <NavItem>Contact</NavItem>
-          <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-            DevLog
+          <NavItem href="/" target="_self">
+            Home
           </NavItem>
+          <NavItem href="/about">About</NavItem>
+          <NavItem>Contact</NavItem>
+          <NavItem href="/posts">DevLog</NavItem>
         </ul>
         <div className="hidden items-center lg:flex gap-2">
-          <Button variant="text" color={isScrolling ? "gray" : "white"}>
+          <Button
+            variant="text"
+            color={isScrolling || isSolid ? "gray" : "white"}
+          >
             Log in
           </Button>
           <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"}>Blocks</Button>
+            <Button color={isScrolling || isSolid ? "gray" : "white"}>
+              Blocks
+            </Button>
           </a>
         </div>
         <IconButton
