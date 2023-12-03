@@ -11,7 +11,7 @@ import {
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export function BlogPostCard({ props }) {
+export function BlogPostCard({ props, cta }) {
   return (
     <Card color="transparent" shadow={false}>
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52">
@@ -45,7 +45,7 @@ export function BlogPostCard({ props }) {
             color="gray"
             className="flex items-center gap-2"
           >
-            read more
+            {cta ? cta : "Read more"}
             <ArrowRightIcon
               strokeWidth={3}
               className="h-3.5 w-3.5 text-gray-900"
