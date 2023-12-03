@@ -12,13 +12,16 @@ import {
 } from "@material-tailwind/react";
 import { PhoneIcon, EnvelopeIcon, TicketIcon } from "@heroicons/react/24/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebook,
   faGithub,
   faInstagram,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+
+function goTo(href: string) {
+  return window.open(href, "_blank");
+}
 
 export function ContactForm() {
   return (
@@ -111,27 +114,43 @@ export function ContactForm() {
               </div>
               <div className="flex gap-5">
                 <PhoneIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  <img src="https://flagsapi.com/US/flat/16.png"></img>
-                  +1 (470) 210 4850
-                </Typography>
+                <Link href={"mailto:eltonleao.dev@gmail.com"}>
+                  <Typography variant="h6" color="white" className="mb-2">
+                    <img src="https://flagsapi.com/US/flat/16.png"></img>
+                    +1 (470) 210 4850
+                  </Typography>
+                </Link>
               </div>
               <div className="flex my-2 gap-5">
                 <EnvelopeIcon className="h-6 w-6 text-white" />
-                <Typography variant="h6" color="white" className="mb-2">
-                  eltonleao.dev@gmail.com
-                </Typography>
+                <Link href={"mailto:eltonleao.dev@gmail.com"}>
+                  <Typography variant="h6" color="white" className="mb-2">
+                    eltonleao.dev@gmail.com
+                  </Typography>
+                </Link>
               </div>
               <div className="flex items-center gap-5">
-                <IconButton variant="text" color="white">
-                  <FontAwesomeIcon className="text-lg" icon={faLinkedin} />
-                </IconButton>
-                <IconButton variant="text" color="white">
-                  <FontAwesomeIcon className="text-lg" icon={faInstagram} />
-                </IconButton>
-                <IconButton variant="text" color="white">
-                  <FontAwesomeIcon className="text-lg	" icon={faGithub} />
-                </IconButton>
+                <Link
+                  href={"https://www.linkedin.com/in/elton-leao/"}
+                  target="_blank"
+                >
+                  <IconButton variant="text" color="white">
+                    <FontAwesomeIcon className="text-lg" icon={faLinkedin} />
+                  </IconButton>
+                </Link>
+                <Link
+                  href={"https://instagram.com/eltonleao.dev"}
+                  target="_blank"
+                >
+                  <IconButton variant="text" color="white">
+                    <FontAwesomeIcon className="text-lg" icon={faInstagram} />
+                  </IconButton>
+                </Link>
+                <Link href={"https://github.com/eltonleao"} target="_blank">
+                  <IconButton variant="text" color="white">
+                    <FontAwesomeIcon className="text-lg	" icon={faGithub} />
+                  </IconButton>
+                </Link>
               </div>
             </div>
           </CardBody>

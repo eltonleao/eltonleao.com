@@ -33,7 +33,7 @@ function Hero() {
         </div>
         <Typography variant="lead" className="!text-gray-500 mt-8">
           Full Stack Web Developer creating impactful solutions for better lives
-          through technology for over 5 years
+          through technology for over 5 years.
         </Typography>
         <Button
           variant="text"

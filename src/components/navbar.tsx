@@ -31,6 +31,7 @@ function NavItem({ children, href }: NavItemProps) {
 export function Navbar() {
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
+  const [shadow, setShadow] = React.useState(false);
 
   function handleOpen() {
     setOpen((cur) => !cur);
@@ -47,6 +48,7 @@ export function Navbar() {
     function handleScroll() {
       if (window.scrollY > 0) {
         setIsScrolling(true);
+        setShadow(true);
       } else {
         setIsScrolling(false);
       }
