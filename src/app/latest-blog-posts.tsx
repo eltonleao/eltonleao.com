@@ -1,29 +1,20 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Typography, Card, CardBody } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import BlogPostCard from "@/components/blog-post-card";
 
-const BLOG_POSTS = [
-  {
-    img: "/image/blogs/blog-1.png",
-    title: "Hydrogen-Powered Vehicles",
-    desc: "This article delves into the cutting-edge technology behind hydrogen fuel cells and their environmental benefits.",
-  },
-  {
-    img: "/image/blogs/blog-2.png",
-    title: "Mental Health in the Digital Age",
-    desc: "This article explores the intricate relationship between social media usage and mental health",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-];
-
 export function LatestBlogPosts() {
+  const [BLOG_POSTS, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://blog.eltonleao.com/wp-json/wp/v2/posts?per_page=3&_embed")
+      .then((response) => response.json())
+      .then((json) => setPosts(json))
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  }, []);
   return (
     <section className="py-40 px-8">
       <div className="container mx-auto mb-12">
@@ -32,8 +23,8 @@ export function LatestBlogPosts() {
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-        {BLOG_POSTS.map((props, idx) => (
-          <BlogPostCard key={idx} {...props} />
+        {BLOG_POSTS.map((props: any, idx) => (
+          <BlogPostCard key={idx} props={props} />
         ))}
         <Card
           className="relative grid h-full w-full place-items-center overflow-hidden

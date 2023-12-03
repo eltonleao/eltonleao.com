@@ -1,54 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Typography, Card, CardBody } from "@material-tailwind/react";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import BlogPostCard from "@/components/blog-post-card";
-
-const BLOG_POSTS = [
-  {
-    img: "/image/blogs/blog-1.png",
-    title: "Hydrogen-Powered Vehicles",
-    desc: "This article delves into the cutting-edge technology behind hydrogen fuel cells and their environmental benefits.",
-  },
-  {
-    img: "/image/blogs/blog-2.png",
-    title: "Mental Health in the Digital Age",
-    desc: "This article explores the intricate relationship between social media usage and mental health",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-  {
-    img: "/image/blogs/blog-3.png",
-    title: "Mars Colonization and Beyond",
-    desc: "This article takes readers on a journey through the latest developments in space exploration.",
-  },
-];
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function AllPosts() {
+  const [BLOG_POSTS, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://blog.eltonleao.com/wp-json/wp/v2/posts?_embed")
+      .then((response) => response.json())
+      .then((json) => setPosts(json))
+      .then((data) => console.log(data))
+      .then((data) => setLoading(false))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
     <section className="py-40 px-8">
       <div className="container mx-auto mb-12">
@@ -56,11 +27,21 @@ export function AllPosts() {
           DEVLOG
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-        {BLOG_POSTS.map((props, idx) => (
-          <BlogPostCard key={idx} {...props} />
-        ))}
-      </div>
+      {loading ? (
+        <div className="flex justify-center">
+          <FontAwesomeIcon
+            size="5x"
+            icon={faSpinner}
+            className="spinner text-5xl	"
+          />
+        </div>
+      ) : (
+        <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {BLOG_POSTS.map((props, idx) => (
+            <BlogPostCard key={idx} props={props} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

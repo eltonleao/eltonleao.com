@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 interface NavItemProps {
   children: React.ReactNode;
@@ -30,7 +31,6 @@ function NavItem({ children, href, target }: NavItemProps) {
 }
 
 export function Navbar({ isSolid = false }) {
-  console.log("🚀 ~ file: navbar.tsx:32 ~ Navbar ~ isSolid:", isSolid);
   const [open, setOpen] = React.useState(false);
   const [isScrolling, setIsScrolling] = React.useState(false);
   const [shadow, setShadow] = React.useState(false);
@@ -74,7 +74,7 @@ export function Navbar({ isSolid = false }) {
           variant="h6"
           color={isScrolling || isSolid ? "blue-gray" : "white"}
         >
-          eltonleao.dev
+          <Link href="/">eltonleao.dev</Link>
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -86,7 +86,7 @@ export function Navbar({ isSolid = false }) {
           </NavItem>
           <NavItem href="/about">About</NavItem>
           <NavItem>Contact</NavItem>
-          <NavItem href="/posts">DevLog</NavItem>
+          <NavItem href="/blog/posts">DevLog</NavItem>
         </ul>
         <div className="hidden items-center lg:flex gap-2">
           <Button
