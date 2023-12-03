@@ -84,20 +84,20 @@ export function Navbar({ isSolid = false }) {
           <NavItem href="/" target="_self">
             Home
           </NavItem>
-          <NavItem href="/about">About</NavItem>
-          <NavItem>Contact</NavItem>
-          <NavItem href="/blog/posts">DevLog</NavItem>
+          {/* <NavItem href="/about">About</NavItem> */}
+          <NavItem href="#contact">Contact</NavItem>
+          {/* <NavItem href="/blog/posts">DevLog</NavItem> */}
         </ul>
         <div className="hidden items-center lg:flex gap-2">
-          <Button
+          {/* <Button
             variant="text"
             color={isScrolling || isSolid ? "gray" : "white"}
           >
             Log in
-          </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
+          </Button> */}
+          <a href="/blog/posts">
             <Button color={isScrolling || isSolid ? "gray" : "white"}>
-              Blocks
+              Projects
             </Button>
           </a>
         </div>
