@@ -5,14 +5,20 @@ import { Button, Typography, Card, CardBody } from "@material-tailwind/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import BlogPostCard from "@/components/blog-post-card";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
+
 export function LatestBlogPosts() {
   const [BLOG_POSTS, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     fetch("https://blog.eltonleao.com/wp-json/wp/v2/posts?per_page=3&_embed")
       .then((response) => response.json())
       .then((json) => setPosts(json))
-      .then((data) => console.log(data))
+      .then((data) => setLoading(false))
       .catch((error) => console.log(error));
   }, []);
   return (
@@ -23,9 +29,19 @@ export function LatestBlogPosts() {
         </Typography>
       </div>
       <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-        {BLOG_POSTS.map((props: any, idx) => (
-          <BlogPostCard key={idx} props={props} />
-        ))}
+        {loading ? (
+          <div className="flex justify-center">
+            <FontAwesomeIcon
+              size="5x"
+              icon={faSpinner}
+              className="spinner text-5xl	"
+            />
+          </div>
+        ) : (
+          BLOG_POSTS.map((props: any, idx) => (
+            <BlogPostCard key={idx} props={props} />
+          ))
+        )}
         <Card
           className="relative grid h-full w-full place-items-center overflow-hidden
             bg-black"
@@ -39,17 +55,19 @@ export function LatestBlogPosts() {
               I am a versatile writer who explores a wide range of genres and
               topics.
             </Typography>
-            <Button
-              variant="text"
-              color="white"
-              className="flex items-center gap-2"
-            >
-              read more
-              <ArrowRightIcon
-                strokeWidth={3}
-                className="h-3.5 w-3.5 text-white"
-              />
-            </Button>
+            <Link href="/blog/posts">
+              <Button
+                variant="text"
+                color="white"
+                className="flex items-center gap-2"
+              >
+                read more
+                <ArrowRightIcon
+                  strokeWidth={3}
+                  className="h-3.5 w-3.5 text-white"
+                />
+              </Button>
+            </Link>
           </CardBody>
         </Card>
       </div>

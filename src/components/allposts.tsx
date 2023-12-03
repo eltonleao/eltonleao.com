@@ -11,6 +11,11 @@ export function AllPosts() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    //scroll to top
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     setLoading(true);
     fetch("https://blog.eltonleao.com/wp-json/wp/v2/posts?_embed")
       .then((response) => response.json())
