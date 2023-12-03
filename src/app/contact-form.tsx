@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import {
   Button,
   IconButton,
@@ -18,12 +18,50 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-
-function goTo(href: string) {
-  return window.open(href, "_blank");
-}
+import axios from "axios";
+import Swal from "sweetalert2";
 
 export function ContactForm() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  const form: any = useRef(null);
+
+  function handleSubmit(e: { preventDefault: () => void }) {
+    e.preventDefault();
+    console.log(name, email, message);
+    Swal.showLoading();
+    axios
+      .post("https://api.eltonleao.com/v1/index.php", {
+        action: "send-contato-site",
+        data: {
+          name: name,
+          email: email,
+          message: message,
+        },
+      })
+      .then((response) => {
+        //clear form
+        form.current.reset();
+        Swal.fire({
+          confirmButtonColor: "#333333",
+          title: "Success!",
+          text: "Your message was sent successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          title: "Error!",
+          text: "An error occurred while sending your message!",
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
+      });
+  }
+
   return (
     <section id="contact" className="px-8 pt-20">
       <div className="container mx-auto mb-5 md:mb-20 text-center">
@@ -38,39 +76,30 @@ export function ContactForm() {
         <Card shadow={true} className="border border-gray/50">
           <CardBody className="grid grid-cols-1 md:p-10 lg:grid-cols-2 md:gap-28">
             <div className="w-full mt-8 md:mt-0 md:px-10 h-full p-5">
-              <form action="#">
-                <div className="mb-8 grid gap-4 lg:grid-cols-2">
+              <form ref={form} onSubmit={handleSubmit}>
+                <div className="mb-8 grid gap-4">
                   {/* @ts-ignore */}
                   <Input
+                    onChange={(e) => setName(e.target.value)}
                     color="gray"
                     size="lg"
                     variant="static"
-                    label="First Name"
-                    name="first-name"
+                    label="Your Name"
+                    name="name"
                     placeholder="John"
                     containerProps={{
                       className: "!min-w-full mb-3 md:mb-0",
                     }}
                   />
-                  {/* @ts-ignore */}
-                  <Input
-                    color="gray"
-                    size="lg"
-                    variant="static"
-                    label="Last Name"
-                    name="last-name"
-                    placeholder="Watson"
-                    containerProps={{
-                      className: "!min-w-full",
-                    }}
-                  />
                 </div>
                 {/* @ts-ignore */}
                 <Input
+                  onChange={(e) => setEmail(e.target.value)}
                   color="gray"
                   size="lg"
                   variant="static"
                   label="Email"
+                  type="email"
                   name="first-name"
                   placeholder="john.h.watson@mail.com"
                   containerProps={{
@@ -78,6 +107,7 @@ export function ContactForm() {
                   }}
                 />
                 <Textarea
+                  onChange={(e) => setMessage(e.target.value)}
                   color="gray"
                   size="lg"
                   variant="static"
@@ -88,7 +118,12 @@ export function ContactForm() {
                   }}
                 />
                 <div className="w-full flex justify-end">
-                  <Button className="w-full md:w-fit" color="gray" size="md">
+                  <Button
+                    className="w-full md:w-fit"
+                    color="gray"
+                    size="md"
+                    type="submit"
+                  >
                     Send message
                   </Button>
                 </div>
