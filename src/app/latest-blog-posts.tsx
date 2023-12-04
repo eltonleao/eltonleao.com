@@ -39,7 +39,7 @@ export function LatestBlogPosts() {
           </div>
         ) : (
           BLOG_POSTS.map((props: any, idx) => (
-            <BlogPostCard key={idx} props={props} />
+            <BlogPostCard key={idx} props={props} cta={undefined} />
           ))
         )}
         <Card

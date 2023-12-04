@@ -43,7 +43,7 @@ export function AllPosts() {
       ) : (
         <div className="container mx-auto grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {BLOG_POSTS.map((props, idx) => (
-            <BlogPostCard key={idx} props={props} />
+            <BlogPostCard key={idx} props={props} cta={undefined} />
           ))}
         </div>
       )}

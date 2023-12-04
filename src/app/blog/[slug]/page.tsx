@@ -11,7 +11,7 @@ import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const [POST, setPost] = useState({});
+  const [POST, setPost]: any = useState({});
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
