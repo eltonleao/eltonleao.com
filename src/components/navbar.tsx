@@ -128,7 +128,7 @@ export function Navbar({ isSolid = false }) {
           <ul className="flex flex-col gap-4 text-blue-gray-900">
             <NavItem href="/">Home</NavItem>
             {/* <NavItem>About Us</NavItem> */}
-            <NavItem href="#contact">Contact</NavItem>{" "}
+            <NavItem href="/#contact">Contact</NavItem>{" "}
           </ul>
           <div className="mt-6 flex items-center gap-4">
             <a href="#devlog">
