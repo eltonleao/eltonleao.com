@@ -102,31 +102,37 @@ export function Navbar({ isSolid = false }) {
           </a>
         </div>
         <IconButton
+          id="navbar-mobile-menu"
           variant="text"
           color="white"
           onClick={handleOpen}
           className="ml-auto inline-block lg:hidden"
         >
           {open ? (
-            <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+            <XMarkIcon
+              strokeWidth={2}
+              className="h-6 w-6 teste1"
+              color={isScrolling ? "black" : "white"}
+            />
           ) : (
-            <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+            <Bars3Icon
+              strokeWidth={2}
+              className="h-6 w-6 teste2"
+              color={isScrolling ? "black" : "white"}
+            />
           )}
         </IconButton>
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-4 rounded-lg bg-white px-6 py-5">
           <ul className="flex flex-col gap-4 text-blue-gray-900">
-            <NavItem>Home</NavItem>
-            <NavItem>About Us</NavItem>
-            <NavItem>Contact Us</NavItem>
-            <NavItem href="https://www.material-tailwind.com/docs/react/installation">
-              Docs
-            </NavItem>
+            <NavItem href="/">Home</NavItem>
+            {/* <NavItem>About Us</NavItem> */}
+            <NavItem href="#contact">Contact</NavItem>{" "}
           </ul>
           <div className="mt-6 flex items-center gap-4">
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">Blocks</Button>
+            <a href="#devlog">
+              <Button color="gray">Projects</Button>
             </a>
           </div>
         </div>
