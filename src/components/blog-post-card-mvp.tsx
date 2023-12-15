@@ -67,10 +67,10 @@ export function BlogPostCard({ props }: any) {
             dangerouslySetInnerHTML={{ __html: props.excerpt.rendered }}
           ></span>
         </Typography>
-        <div className="mb-2">
+        <div className="mb-2 flex flex-wrap	">
           {props._embedded["wp:term"][1].map((category: any) => (
             <span
-              className={`tag-${category.name} text-xs font-medium me-2 px-2.5 py-0.5 rounded mb-2`}
+              className={`tag-${category.name} text-xs font-medium me-2 px-2.5 py-0.5 rounded mb-2 `}
             >
               {category.name}
             </span>
