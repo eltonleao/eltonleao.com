@@ -24,7 +24,7 @@
     }
 }
 
-/* .tag-PHP {
+.tag-PHP {
     background-color: #777BB3;
     color: black;
 }
@@ -49,57 +49,57 @@
     color: black;
 }
 
-.tag-SONYVEGAS {
+/* .tag-SONYVEGAS {
     background-color: #1195CF;
     color: black;
-}
+} */
 
 .tag-NODEJS {
     background-color: #689F63;
     color: black;
 }
 
-.tag-ARDUINO {
+/* .tag-ARDUINO {
     background-color: #00979D;
     color: black;
-}
+} */
 
-.tag-C\+\+ {
+/* .tag-C\+\+ {
     background-color: #00599C;
     color: #F29111;
-}
+} */
 
 .tag-WORDPRESS {
     background-color: #21759B;
     color: #F29111;
 }
 
-.tag-ANGULAR {
+/* .tag-ANGULAR {
     background-color: #DD0031;
     color: white;
-}
+} */
 
-.tag-IONIC {
+/* .tag-IONIC {
     background-color: #4D8AF0;
     color: white;
-}
+} */
 
-.tag-NoSQL {
+/* .tag-NoSQL {
     background-color: #4D8AF0;
     color: white;
-}
+} */
 
-.tag-Python {
+/* .tag-Python {
     color: #FFD43B;
     background-color: #5A9FD4;
-}
+} */
 
 .tag-VTEX {
     background-color: #FF3366;
     color: white;
 }
 
-.tag-VIDEO-EDITING {
+/* .tag-VIDEO-EDITING {
     background-color: #383838;
     color: white;
 } */
