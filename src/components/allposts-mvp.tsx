@@ -18,7 +18,7 @@ export function AllPosts() {
   useEffect(() => {
     setLoading(true);
     fetch(
-      "https://blog.eltonleao.com/wp-json/wp/v2/posts?_embed&orderby=id&order=asc"
+      "https://blog.eltonleao.com/wp-json/wp/v2/posts?_embed&orderby=id&order=asc&per_page=100"
     )
       .then((response) => response.json())
       .then((json) => setPosts(json))

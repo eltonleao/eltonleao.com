@@ -16,10 +16,6 @@ const stc = require("string-to-color");
 export function BlogPostCard({ props }: any) {
   // const url = /blog/${props.id};
   const url = props.acf.external_link ? props.acf.external_link : false;
-  console.log(
-    "🚀 ~ file: blog-post-card-mvp.tsx:19 ~ BlogPostCard ~ url:",
-    url
-  );
   const imageURL =
     props._embedded &&
     props._embedded["wp:featuredmedia"] &&
