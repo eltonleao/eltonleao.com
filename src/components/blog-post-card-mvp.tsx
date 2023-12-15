@@ -72,7 +72,7 @@ export function BlogPostCard({ props }: any) {
             <span
               className={`tag-${category.name} text-xs font-medium me-2 px-2.5 py-0.5 rounded mb-2 `}
             >
-              {category.name}
+              {category.name.toUpperCase()}
             </span>
           ))}
         </div>
