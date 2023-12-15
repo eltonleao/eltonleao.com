@@ -11,19 +11,43 @@ import {
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
+const stc = require("string-to-color");
+
 export function BlogPostCard({ props }: any) {
   // const url = /blog/${props.id};
-  const url = props.acf.external_link ? props.acf.external_link : "";
+  const url = props.acf.external_link ? props.acf.external_link : false;
+  console.log(
+    "🚀 ~ file: blog-post-card-mvp.tsx:19 ~ BlogPostCard ~ url:",
+    url
+  );
   const imageURL =
     props._embedded &&
     props._embedded["wp:featuredmedia"] &&
     props._embedded["wp:featuredmedia"][0].source_url
       ? props._embedded["wp:featuredmedia"][0].source_url
       : "";
+
   return (
     <Card color="transparent" shadow={false}>
+      <div>
+        {props._embedded["wp:term"][0].map(
+          (category: any) =>
+            category.name !== "Project" && (
+              <span
+                className={`tag-${category.name} text-xs font-medium me-2 px-2.5 py-0.5 rounded mb-2`}
+                key={category.name}
+              >
+                {category.name.toUpperCase()}
+              </span>
+            )
+        )}
+      </div>
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-52">
-        <Link href={url} target="_blank">
+        <Link
+          href={url ? url : "#"}
+          target={url ? "_blank" : "_self"}
+          className={url ? "cursor-pointer" : "cursor-default"}
+        >
           <Image
             width={768}
             height={768}
@@ -47,6 +71,15 @@ export function BlogPostCard({ props }: any) {
             dangerouslySetInnerHTML={{ __html: props.excerpt.rendered }}
           ></span>
         </Typography>
+        <div className="mb-2">
+          {props._embedded["wp:term"][1].map((category: any) => (
+            <span
+              className={`tag-${category.name} text-xs font-medium me-2 px-2.5 py-0.5 rounded mb-2`}
+            >
+              {category.name}
+            </span>
+          ))}
+        </div>
         {url && (
           <Link href={url} target="_blank">
             <Button
