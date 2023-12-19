@@ -69,7 +69,7 @@ export function ContactForm() {
           Let`s keep in touch!
         </Typography>
         <Typography variant="lead" className="mx-auto !text-gray-500">
-          Any questions or remarks? Just write us a message!
+          Any questions or remarks? Just write a message!
         </Typography>
       </div>
       <div className="container mx-auto">
