@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Layout, FixedPlugin } from "@/components";
+import Hotjar from '../components/Hotjar';
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Hotjar />
         <link
           rel="shortcut icon"
           href="https://cdn.eltonleao.com/v1/img/favicon/favicon.ico"
@@ -33,6 +35,7 @@ export default function RootLayout({
           {children}
           <FixedPlugin />
         </Layout>
+
       </body>
     </html>
   );
